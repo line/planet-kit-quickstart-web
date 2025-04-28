@@ -23,7 +23,7 @@ const app = express();
 const compiler = webpack(webpackConfig);
 
 const PORT = process.env.PORT || 3000;
-const HOST = "planet-kit-quick-start.linecorp.com";
+const HOST = "planet-kit-quick-start.lineplanet.me";
 
 app.use(
   webpackDevMiddleware(compiler, {

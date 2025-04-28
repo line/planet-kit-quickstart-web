@@ -70,7 +70,7 @@ This quick start project provides basic functionality of a **group audio call**.
   3. Scroll to the bottom of the file and add the following line:
 
      ```
-     127.0.0.1       planet-kit-quick-start.linecorp.com
+     127.0.0.1       planet-kit-quick-start.lineplanet.me
      ```
 
   4. Save the file and close Notepad.
@@ -88,12 +88,12 @@ This quick start project provides basic functionality of a **group audio call**.
   4. Scroll to the bottom of the file and add the following line:
 
      ```
-     127.0.0.1       planet-kit-quick-start.linecorp.com
+     127.0.0.1       planet-kit-quick-start.lineplanet.me
      ```
 
   5. Press `Ctrl + O` to save the file, then `Enter` to confirm, and `Ctrl + X` to exit nano.
 
-After completing these steps, you will have successfully mapped the quick start domain (`planet-kit-quick-start.linecorp.com`) to your localhost (`127.0.0.1`).
+After completing these steps, you will have successfully mapped the quick start domain (`planet-kit-quick-start.lineplanet.me`) to your localhost (`127.0.0.1`).
 
 <img src="/images/hosts_file.png" width="400"/>
 
@@ -168,7 +168,7 @@ To run the quick start project, ensure you are in the `planet-kit-quickstart-web
 
    **Note**: If you're using the VS Code terminal and encounter a pop-up requesting access to control your browser, select "Allow" to proceed. This permission enables the application to launch.
 
-4. **Open the web page**: After starting the application, you can use the quick start app at `https://planet-kit-quick-start.linecorp.com:3000`.
+4. **Open the web page**: After starting the application, you can use the quick start app at `https://planet-kit-quick-start.lineplanet.me:3000`.
 
 ### 6. Join a group audio call
 
@@ -215,14 +215,14 @@ You can use your browser's Developer Tools to check error messages and logs. Her
 
 ### Invalid certificate authority warning
 
-When running the app in a local environment, you might encounter a `NET::ERR_CERT_AUTHORITY_INVALID` warning in your browser, indicating the site's security certificate is not trusted. This warning is common in local environments because the test domain specified in your hosts file (`planet-kit-quick-start.linecorp.com`) does not have a corresponding valid SSL certificate recognized by your browser.
+When running the app in a local environment, you might encounter a `NET::ERR_CERT_AUTHORITY_INVALID` warning in your browser, indicating the site's security certificate is not trusted. This warning is common in local environments because the test domain specified in your hosts file (`planet-kit-quick-start.lineplanet.me`) does not have a corresponding valid SSL certificate recognized by your browser.
 
-Since the warning occurs in a controlled local environment targeting `planet-kit-quick-start.linecorp.com` mapped to `127.0.0.1`, it's safe to proceed because the connection is for `local`.
+Since the warning occurs in a controlled local environment targeting `planet-kit-quick-start.lineplanet.me` mapped to `127.0.0.1`, it's safe to proceed because the connection is for `local`.
 
 #### How to Proceed
 
 - For Chrome users
-  - Click "Advanced" and select "Proceed to `planet-kit-quick-start.linecorp.com`(unsafe)".
+  - Click "Advanced" and select "Proceed to `planet-kit-quick-start.lineplanet.me`(unsafe)".
 - For Safari users
   - Click "Show Details", then "visit this website".
 
