@@ -33,12 +33,14 @@ function GroupAudioCallComponent() {
   const onEvtDisconnected = (disconnectedParam) => {
     const disconnectSource = disconnectedParam?.source;
     const disconnectReason = disconnectedParam?.reason;
-    console.log(`disconnectSource=${disconnectSource}\ndisconnectReason.code=${disconnectReason?.code}\ndisconnectReason.strCode=${disconnectReason?.strCode}`);
+    console.log(
+      `disconnectSource=${disconnectSource}\ndisconnectReason.code=${disconnectReason?.code}\ndisconnectReason.strCode=${disconnectReason?.strCode}`
+    );
     setConferenceState("init");
   };
 
   const onEvtPeerListUpdated = (conferencePeerUpdatedParam) => {
-    console.log("TestApp | ConferenceComponent | onConferenceEvtPeerListUpdated callback");
+    console.log("onConferenceEvtPeerListUpdated callback");
     console.log(JSON.stringify(conferencePeerUpdatedParam));
     const { totalPeersCount } = conferencePeerUpdatedParam;
     setParticipantCount(totalPeersCount);
@@ -53,7 +55,7 @@ function GroupAudioCallComponent() {
     switch (conferenceState) {
       case "init":
         setConferenceState("connecting");
-        const planetKitConferenceJoinparams = {
+        const planetKitConferenceJoinParams = {
           myId: USER_ID,
           myServiceId: SERVICE_ID,
           roomId: roomId,
@@ -71,7 +73,7 @@ function GroupAudioCallComponent() {
         };
 
         try {
-          planetKit.joinConference(planetKitConferenceJoinparams);
+          planetKit.joinConference(planetKitConferenceJoinParams);
         } catch (error) {
           setConferenceState("init");
           alert(error?.message);
@@ -100,10 +102,22 @@ function GroupAudioCallComponent() {
       <div className="form-container">
         <div className="grid-container">
           <label htmlFor="myId">My ID</label>
-          <input id="myId" type="text" className="input-field" placeholder={USER_ID} disabled />
+          <input
+            id="myId"
+            type="text"
+            className="input-field"
+            placeholder={USER_ID}
+            disabled
+          />
 
           <label htmlFor="roomId">Room ID</label>
-          <input id="roomId" type="text" className="input-field" placeholder="RoomID" onChange={handleChangeRoomId} />
+          <input
+            id="roomId"
+            type="text"
+            className="input-field"
+            placeholder="RoomID"
+            onChange={handleChangeRoomId}
+          />
 
           <label htmlFor="conferenceState">Conference state</label>
           <div id="conferenceState" className="state-display">
